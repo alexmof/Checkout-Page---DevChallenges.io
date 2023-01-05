@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-main {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+header {
+    color: #4E5150;
+}
+
+.main {
+    display: flex;
+}
+
+h2 {
+    margin-top: 0px;
+    color: #333333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    color: #4F4F4F;
+}
+
+.field svg {
+    position: absolute;
+    fill: #828282;
+}
+
+.field input {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: #828282;
+    border: 1px solid #828282;
+    border-radius: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    outline: unset;
+}
+
+.field select {
+    font-family: 'Montserrat', sans-serif;
+    color: #828282;
+    background-color: #FFFFFF;
+    border: 1px solid #828282;
+    border-radius: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 52px;
+}
+
+.country-postal {
+    display: flex;
+    flex-direction: row;
+}
+
+#countries {
+    cursor: pointer;
+}
+
+.check-save-fields {
+    display: flex;
+    align-self: flex-start;
+}
+
+#save-fields {
+    position: absolute;
+    z-index: 4;
+    width: 19px;
+    height: 19px;
+    margin-left: 4px;
+    margin-top: 4px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#checkbox {
+    position: absolute;
+    fill: #828282;
+    cursor: pointer;
+}
+
+#checkbox:hover {
+    fill: #4F4F4F;
+}
+
+#checked {
+    display: none;
+    position: absolute;
+    fill: #F2994A;
+    cursor: pointer;
+}
+
+#save-fields:checked ~ #checked {
+    display: initial;
+}
+
+#save-fields:checked ~ #checkbox {
+    display: none;
+}
+
+label {
+    color: #4F4F4F;
+}
+
+.submit-button {
+    align-self: flex-end;
+    border: none;
+    border-radius: 12px;
+    color: #FFF;
+    background-color: #F2994A;
+    font-size: 16px;
+    width: 166px;
+    height: 54px;
+    cursor: pointer;
+}
+
+.purchase-information {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    border-radius: 12px;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    border-radius: 12px;
+}
+
+.product-name {
+    margin: 0px;
+}
+
+.product-info-qtd {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #4E5150;
+}
+
+.prices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.prices .price-conteiner {
+    color: #F2994A;
+}
+
+.original-price {
+    text-decoration-line: line-through;
+}
+
+.box-qtd {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border: 1px solid #828282;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.button {
+    border: 0px;
+    border-radius: 4px;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.button svg {
+    padding: 0px;
+    width: 12px;
+}
+
+.shipping {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #333333;
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.price-conteiner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    color: #333333;
+    justify-content: space-between;
+}
+
+footer {
+    font-size: 14px;
+    color: rgb(189, 189, 189);
+    align-self: center;
+    margin-top: 20px;
+}

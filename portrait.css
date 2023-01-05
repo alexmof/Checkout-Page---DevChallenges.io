@@ -1,0 +1,125 @@
+body {
+    margin-top: 0px;
+    max-width: 959px;
+    min-width: 375px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 32px;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+.main {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+form {
+    gap: 0px;
+    align-items: center;
+}
+
+#contact {
+    margin-bottom: 30px;
+    margin-top: 39px;
+}
+
+.field label {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.field-conteiner svg {
+    width: 18px;
+    padding-top: 12px;
+    padding-left: 12px;
+}
+
+.field {
+    margin-bottom: 16.50px;
+}
+
+.section .field input {
+    width: 75vw;
+    height: 2px;
+    min-width: 240px;
+    max-width: 500px;
+    font-size: 12px;
+    padding-left: 39px;
+}
+
+.country-postal{
+    gap: 11%;
+}
+
+#countries {
+    width: 35vw;
+    height: 2px;
+    min-width: 130px;
+    max-width: 235px;
+}
+
+.field #postal-code {
+    width: 30vw;
+    min-width: 100px;
+    max-width: 205px;
+}
+
+.check-save-fields label {
+    font-size: 10px;
+    margin-top: 2px;
+    margin-left: 24px;
+}
+
+.checkbox-conteiner span svg {
+    width: 16px;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+.submit-button {
+    margin-top: 20px;
+}
+
+.purchase-information {
+    height: 489px;
+    width: 75vw;
+    max-width: 450px;
+    padding: 25px;
+}
+
+.product {
+    margin-bottom: 30px;
+    gap: 10%;
+}
+
+.product-name {
+    font-size: 12px;
+}
+
+.prices {
+    gap: 10px;
+}
+
+.prices .price-conteiner {
+    font-size: 14px;
+}
+
+.original-price {
+    font-size: 10px;
+    padding-top: 7px;
+}
+
+.box-qtd {
+    width: 122px;
+    height: 50px;
+}
+
+.shipping {
+    margin-top: 80px;
+}
