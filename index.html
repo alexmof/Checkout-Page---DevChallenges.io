@@ -23,15 +23,21 @@
             <label for="email">E-mail</label>
             <div class="field-conteiner">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48"><path d="M7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm17-15.1 17-11.15V11L24 21.9 7 11v2.75Z"/></svg>
-              <input type="email" name="email" id="email" placeholder="Enter your email...">
+              <input class="required" type="email" name="email" id="email" placeholder="Enter your email..." oninput="requiredField(0)">
             </div>
+            <span class="error">
+              Email is required!
+            </span>
           </div>
           <div class="field">
             <label for="tel">Phone</label>
             <div class="field-conteiner">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48"><path d="M39.75 42q-6.1 0-12.125-3T16.8 31.2Q12 26.4 9 20.375 6 14.35 6 8.25q0-.95.65-1.6Q7.3 6 8.25 6h7q.7 0 1.225.475.525.475.675 1.275l1.35 6.3q.1.7-.025 1.275t-.525.975l-5 5.05q2.8 4.65 6.275 8.1Q22.7 32.9 27.1 35.3l4.75-4.9q.5-.55 1.15-.775.65-.225 1.3-.075l5.95 1.3q.75.15 1.25.75T42 33v6.75q0 .95-.65 1.6-.65.65-1.6.65Z"/></svg>
-              <input type="tel" name="tel" id="tel" placeholder="Enter your phone..." pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}">
+              <input class="required" type="tel" name="tel" id="tel" placeholder="Enter your phone..." oninput="requiredField(1)" pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}">
             </div>
+            <span class="error">
+              Phone is required!
+            </span>
           </div>
         </div>
         <div id="shipping-addres" class="section">
@@ -40,22 +46,31 @@
             <label for="name">Full name</label>
             <div class="field-conteiner">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48"><path d="M11.1 35.25q3.15-2 6.225-3.025Q20.4 31.2 24 31.2q3.6 0 6.7 1.025t6.25 3.025q2.2-2.7 3.125-5.45Q41 27.05 41 24q0-7.25-4.875-12.125T24 7q-7.25 0-12.125 4.875T7 24q0 3.05.95 5.8t3.15 5.45ZM24 25.5q-2.9 0-4.875-1.975T17.15 18.65q0-2.9 1.975-4.875T24 11.8q2.9 0 4.875 1.975t1.975 4.875q0 2.9-1.975 4.875T24 25.5ZM24 44q-4.2 0-7.85-1.575-3.65-1.575-6.35-4.3Q7.1 35.4 5.55 31.75 4 28.1 4 23.95q0-4.1 1.575-7.75 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24.05 4q4.1 0 7.75 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Z"/></svg>
-              <input type="text" name="name" id="name" placeholder="Your name...">
+              <input class="required" type="text" name="name" id="name" placeholder="Your name..." oninput="requiredField(2)">
             </div>
+            <span class="error">
+              Name is required!
+            </span>
           </div>
           <div class="field">
             <label for="address">Address</label>
             <div class="field-conteiner">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48"><path d="M8 42V18L24 6l16 12v24H28V28h-8v14Z"/></svg>
-              <input type="text" name="address" id="address" placeholder="Your address...">
+              <input class="required" type="text" name="address" id="address" placeholder="Your address..." oninput="requiredField(3)">
             </div>
+            <span class="error">
+              Address is required!
+            </span>
           </div>
           <div class="field">
             <label for="city">City</label>
             <div class="field-conteiner">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48"><path d="M6 42V14.1h12.35V9.5L24 4l5.65 5.5v12.9H42V42Zm3-3h5.3v-5.3H9Zm0-8.3h5.3v-5.3H9Zm0-8.3h5.3v-5.3H9ZM21.35 39h5.3v-5.3h-5.3Zm0-8.3h5.3v-5.3h-5.3Zm0-8.3h5.3v-5.3h-5.3Zm0-8.3h5.3V8.8h-5.3ZM33.7 39H39v-5.3h-5.3Zm0-8.3H39v-5.3h-5.3Z"/></svg>
-              <input type="text" name="city" id="city" placeholder="Your city...">
+              <input class="required" type="text" name="city" id="city" placeholder="Your city..." oninput="requiredField(4)">
             </div>
+            <span class="error">
+              City is required!
+            </span>
           </div>
           <div class="country-postal">
             <div class="field">
@@ -70,13 +85,19 @@
                   <option value="united-states">United States</option>
                 </select>
               </div>
+              <span class="error-select">
+                Country is required!
+              </span>
             </div>
             <div class="field">
               <label for="postal-code">Postal code</label>
               <div class="field-conteiner">
                 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48"><path d="M7 44q-1.2 0-2.1-.9Q4 42.2 4 41V19q0-1.2.9-2.1.9-.9 2.1-.9h5V4h15v7.25H15v15.9h3V16h23q1.2 0 2.1.9.9.9.9 2.1v22q0 1.2-.9 2.1-.9.9-2.1.9Z"/></svg>
-                <input type="text" name="postal-code" id="postal-code" placeholder="Your postal code..">
+                <input class="required" type="text" name="postal-code" id="postal-code" placeholder="Your postal code.." oninput="requiredField(5)">
               </div>
+              <span class="error">
+                Postal code is required!
+              </span>
             </div>
           </div>
         </div>
@@ -176,6 +197,32 @@
     clss('#total').innerText = (parseFloat(total()) - parseFloat(price.innerText) + dol)
     price.innerText = dol;
   } 
+
+  function form() {
+    return document.querySelectorAll('form');
+  }
+
+  function requiredFields() {
+    return document.querySelectorAll('.required');
+  }
+
+  function errorMessages() {
+    return document.querySelectorAll('.error');
+  }
+
+  function requiredField(fieldIndex) {
+    if (requiredFields()[fieldIndex].value.length <= 0) {
+      errorAlert(fieldIndex);
+    } else {
+      requiredFields()[fieldIndex].style.border = '1px solid #828282'
+      errorMessages()[fieldIndex].style.display = 'none';
+    }
+  }
+
+  function errorAlert(fieldIndex) {
+    requiredFields()[fieldIndex].style.border = '2px solid #E63636';
+    errorMessages()[fieldIndex].style.display = 'block';
+  }
 
   window.onload = function() {
     clss('#plus-product1').onclick = function() {
