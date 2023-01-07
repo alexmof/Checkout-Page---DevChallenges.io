@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="all.css">
   <link rel="stylesheet" href="landscape.css" media="screen and (orientation: landscape)">
   <link rel="stylesheet" href="portrait.css" media="screen and (orientation: portrait)">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>Checkout Page</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
       <h1>Checkout</h1>
     </header>
     <div class="main">
-      <form action="" method="post">
+      <form action="" method="post" onsubmit="return confirm('Do you really want to confirm the purchase?')">
         <div id="contact" class="section">
           <h2>Contact information</h2>
           <div class="field">
@@ -136,13 +137,16 @@
         </div>
         <div class="shipping">
           <p>Shipping</p>
-          <p>$19</p>
+          <div class="price-conteiner">
+            <p>$</p>
+            <p id="shipping">0</p>
+          </div>
         </div>
         <div class="total">
           <p>Total</p>
           <div class="price-conteiner">
             <p>$</p>
-            <p id="total">148.98</p>
+            <p id="total">129.98</p>
           </div>
         </div>
       </div>
@@ -166,6 +170,12 @@
   function subtractTotal(el) {
     clss('#total').innerText = (parseFloat(total()) - parseFloat(clss(el).innerText)).toFixed(2);
   }
+
+  function mudaFrete(dol) {
+    const price = clss('#shipping');
+    clss('#total').innerText = (parseFloat(total()) - parseFloat(price.innerText) + dol)
+    price.innerText = dol;
+  } 
 
   window.onload = function() {
     clss('#plus-product1').onclick = function() {
@@ -191,6 +201,27 @@
       clss('#qtd-product2').innerText = parseInt(clss("#qtd-product2").innerText) + 1;
       addTotal('#price-product2');
     }
+
+    $('#countries').change(function() {
+      var country = $('#countries').val();
+      switch (country) {
+        case '':
+          alert("Select a country!")
+          break;
+        case 'brazil':
+          mudaFrete(50)
+          break;
+        case 'japan':
+          mudaFrete(30)
+          break
+        case 'france':
+          mudaFrete(19)
+          break
+        case 'united-states':
+          mudaFrete(7)
+          break;
+      }
+    })
   }
 </script>
 </html>
